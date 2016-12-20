@@ -9,13 +9,18 @@
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
       <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
 
-      <!-- <script src="app.js"></script> -->
+      <script src="app.js"></script>
     </head>
 
     <body>
       <h1>Dream-Cacher</h1>
-      <div ng-model="formCtrl">
-        <form ng-submit type="text" ng-model="title">
+
+      <div>
+        <form name="frm">
+          <input type="text" name="title" ng-model="title">  
+        </form>
+
       </div>
+
     </body>
   </html>
