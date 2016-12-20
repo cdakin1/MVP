@@ -1,10 +1,20 @@
-var app = angular.module('myApp', ['$scope', function(scope) {;
-    $scope.submit = function() {
-        console.log('test')
-    }
+var app = angular.module('myApp', []);
 
-    $scope.formCtrl
-}])
+app.controller('submitController', function($scope) {
+  $scope.dream = {
+    title: '',
+    body: ''
+  };
+  $scope.dreams = [];
+  $scope.submit = function() {
+    $scope.dreams.push($scope.dream);
+    console.log($scope.dream);
+    console.log($scope.dreams);
+  };
 
 
-console.log('testetstset')
+
+});
+
+
+console.log('testetstset');

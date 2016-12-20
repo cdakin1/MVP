@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-  <html ng-app>
+  <html ng-app="myApp">
     <head>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -10,15 +10,33 @@
       <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-resource.js"></script>
 
       <script src="app.js"></script>
+      <!-- <script src="app.css"></script> -->
+
+      </script>
     </head>
 
     <body>
-      <h1>Dream-Cacher</h1>
-
-      <div>
-        <form name="frm">
-          <input type="text" name="title" ng-model="title">  
+      <div class="submit" ng-controller='submitController'>
+        <h1>Dream-Cacher</h1>
+        <form ng-submit="submit()">
+          <div>
+            <input type="text" placeholder="Title" ng-model="dream.title" />
+            <input type="submit" id="submit" value="Submit" />
+          </div>
+          <div>
+            <textarea class="dreamBody" style="width: 400px" style="height: 400px" type="text" placeholder="Body" ng-model="dream.body" />
+          </div>
         </form>
+
+
+      </div>
+
+
+
+      <!-- <div ng-model="myformdata" type="text">
+        <form ng-submit="submit()">
+          <input type="text" name="title">
+        </form> -->
 
       </div>
 
