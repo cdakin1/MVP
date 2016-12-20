@@ -16,29 +16,30 @@
     </head>
 
     <body>
+
       <div class="submit" ng-controller='submitController'>
         <h1>Dream-Cacher</h1>
         <form ng-submit="submit()">
           <div>
             <input type="text" placeholder="Title" ng-model="dream.title" />
-            <input type="submit" id="submit" value="Submit" />
+            <input type="submit" id="submit" />
           </div>
           <div>
-            <textarea class="dreamBody" style="width: 400px" style="height: 400px" type="text" placeholder="Body" ng-model="dream.body" />
+            <textarea class="dreamBody" style="width: 400px" type="text" placeholder="Body" ng-model="dream.body"></textarea>
           </div>
         </form>
+      </div>
 
-
+      <div class="submit" ng-controller='submitController'>
+        <div ng-repeat="n in dreams" ng-model="dreams">
+          <ul>
+            <li>{{n.title}}</li>
+            <li>{{n.body}}</li>
+          </ul>
+        </div>
       </div>
 
 
-
-      <!-- <div ng-model="myformdata" type="text">
-        <form ng-submit="submit()">
-          <input type="text" name="title">
-        </form> -->
-
-      </div>
 
     </body>
   </html>
